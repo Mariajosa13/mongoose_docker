@@ -8,7 +8,7 @@
 import express from "express";
 import mongoose from "mongoose";
 
-const Usuarios = moongose.model('Usuarios', new mongoose.Schema({
+const Usuarios = mongoose.model('Usuarios', new mongoose.Schema({
     usuario: String,
     correo: String,
     clave: String,
@@ -16,7 +16,7 @@ const Usuarios = moongose.model('Usuarios', new mongoose.Schema({
 
 const app = express();
 
-mongoose.connect('mongodb://root:r0O7@localhost:27019/miapp?authSource=admin') /* Password: r0O7 */
+mongoose.connect('mongodb://root:r0O7@localhost:27017/miapp?authSource=admin') /* Password: r0O7 */
 
 
 app.get('/', async(_req, res) => {
