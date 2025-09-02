@@ -1,0 +1,12 @@
+PARA CREAR UNA RED docker network create red3
+
+
+PARA ASOCIAR UN CONTENEDIR A UNA RED: docker create -p27020:27017 --name monguse --network red3 -e MONGO_INITDB_ROOT_USERNAME=root -e MONGO_INITDB_ROOT_PASSWORD=r0O7 mongo
+
+PARA CREAR LA IMAGEN docker build -t nodeappmjcv:1 .
+
+PARA CREAR EL CONTENEDOR docker create -p3002:3000 --name appmjcv --network red1 -e MONGO_INITDB_USERNAME=root -e MONGO_INITDB_PASSWORD=r0O7 nodeappmjcv:1
+
+PARA INICIALIZAR EL CONTAINER docker start monguse
+
+PARA INICIALIZAR LA IMAGEN docker start nodeappmjcv

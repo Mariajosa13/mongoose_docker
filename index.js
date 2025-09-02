@@ -16,7 +16,8 @@ const Usuarios = mongoose.model('Usuarios', new mongoose.Schema({
 
 const app = express();
 
-mongoose.connect('mongodb://root:r0O7@localhost:27017/miapp?authSource=admin') /* Password: r0O7 */
+// mongoose.connect('mongodb://root:r0O7@localhost:27017/miapp?authSource=admin') /* Password: r0O7 */
+mongoose.connect('mongodb://root:r0O7@monguse:27017/mibd?authSource=admin')
 
 
 app.get('/', async(_req, res) => {
